@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Work+Sans:wght@300;400;500;600;700&display=swap'); 
+
+.cart-page {
+  height: 100%;
+  display: flex;
+  transition-duration: .3s;
+}
+.checkout-sidebar {
+  min-width: 22em;
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+  transition-duration: .3s;
+  transition-timing-function: ease;
+  background: #393532;
+  box-shadow: #0000004d 14px 12px 20px, #00000038 0px 15px 12px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+.checkout-content {
+  flex-grow: 1;
+  padding: 2em 1.5em 4.5em;
+  font-family: work sans;
+  text-transform: capitalize;
+  color: #dcdada;
+}
+.cart-items-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding-block: 3em;
+  position: relative;
+  overflow: hidden;
+  transform: translateX(22em);
+  transition-duration: .33s;
+  transition-timing-function: ease;
+}
+.checkout-content div.title {
+  font-size: 1.3em;
+  font-weight: 600;
+  font-family: work sans;
+  margin-bottom: 3rem;
+}
+.checkout-content div.title, .checkout-content .bill-section > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.payment-section {
+  margin-bottom: 1em;
+  font-size: 1.3em;
+  position: relative;
+}
+.payment-section p {
+  font-weight: 500;
+  font-size: 1.2em;
+}
+.card-options {
+  display: flex;
+  align-items: center;
+  margin-top: 1em;
+}
+.payment-section .indicator {
+  position: absolute;
+  width: 4.5em  ;
+  height: 2px;
+  background: #ccc;
+  left: 0;
+  bottom: 22px;
+  transition-duration: .3s;
+}
+.checkout-content .bill-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  margin-top: 5em;
+  font-size: 1.3em;
+  transition-duration: .3s;
+}
+.checkout-content .bill-section >:last-child {
+  font-size: 1.15em;
+  font-weight: 700;
+  margin-top: 1.5em;
+  color: #f1c40f;
+  position: relative;
+}
+.checkout-content .bill-section >:last-child::before {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #ccc;
+  position: absolute;
+  top: -1.3em;
+}
+.checkout-sidebar button {
+  width: 100%;
+  padding-block: 1.5em;
+  border: 3px solid #f1c40f;
+  background: #f1c40f;
+  color: #333;
+  cursor: pointer;
+  font-family: 'DM Sans';
+  font-size: 16.5px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition-duration: .165s;
+}
+.checkout-sidebar button:active {
+  background: #333;
+  color: white;
+}
+.hide {
+  left: -100%;
+}
+.p0 {
+  padding-left: 0;
+  transform: translateX(0);
+}
+.close-btn {
+  position: absolute;
+  width: 3em;
+  height: 3em;
+  border: 2px solid #ff542a;
+  border-radius: 50em;
+  right: -5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: .1s;
+  transition-duration: .3s;
+}
+.close-btn svg {
+  font-size: 1.1em;
+}
+.close-btn:active {
+  transform: scale(.8);
+}
+.cls-btn {
+  width: 2em;
+  height: 2em;
+  border: 2px solid #ff542a;
+  border-radius: 50em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: .1s;
+  transition-duration: .3s;
+}
+.cls-btn svg {
+  font-size: .8em;
+  transform: translateX(.5px);
+}
+.cls-btn:active {
+  transform: scale(.8);
+}
+.clear-btn {
+  padding: .8em 9.6em;
+  margin-top: 2em;
+  border: none;
+  border-radius: 3px;
+  background: #333;
+  color: white;
+  transition-duration: .3s;
+  font-family: 'DM Sans';
+  font-size: 1.5em;
+  font-weight: 700;
+  cursor: pointer;
+}
+.clear-btn:hover {
+  background: #f94a3d;
+  transform: scale(1.05);
+}
+.cart-items-container .bg-frost {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition-duration: .4s;
+}
+@media screen and (max-width: 780px) {
+  .close-btn {
+    top: .5em;
+  }
+  .cl-btn {
+    top: .5em;
+  }
+  .clear-btn {
+    font-size: 1.35em;
+  }
+  .card-options .visa {
+    height: 70px;
+    width: 70px;
+  }
+  .card-options .paypal {
+    height: 100px
+  }
+}
+@media only screen and (max-width: 500px) {
+  .close-btn {
+    top: 6em;
+  }
+  .cl-btn {
+    top: 6em;
+  }
+  .clear-btn:hover{
+    transform: unset;
+    background: #333;
+  }
+  .clear-btn:active {
+    transform: scale(0.9);
+    background: #f94a3d;
+  }
+  .card-options .visa {
+    height: 55px;
+    width: 55px;
+  }
+  .card-options .paypal {
+    height: 85px
+  }
+}
+@media  only screen and (max-width: 1280px) {
+  .card-options {
+    margin-top: -1em;
+  }
+  .card-options svg:first-child {
+    width: 65px;
+    height: 65px; 
+  } 
+  .card-options .paypal {
+    width: 95px;
+  }
+}
+@media screen and (max-height: 835px) {
+  .checkout-content .bill-section {
+    margin-top: 2em;
+  }
+}
+@media  screen and (max-width: 1280px) and  (max-height: 835px) { 
+  .checkout-content .bill-section{
+    margin-top: 5em;
+  }
+}
+@media  screen and (min-width: 1280px) and  (max-height: 720px) { 
+  .checkout-sidebar {
+    overflow-y: scroll;
+  }
+}
+@media  screen and (max-width: 1280px) and  (max-height: 562px) { 
+  .checkout-sidebar {
+    overflow-y: scroll;
+  }
+}
+@media  screen and (max-width: 780px) and  (min-height: 486px) { 
+  .checkout-sidebar {
+    overflow-y: unset;
+  }
+}
+@media  screen and (max-width: 1280px) and  (max-height: 675px) { 
+  .checkout-content .bill-section{
+    margin-top: 0em;
+  }
+}
+@media  screen and (max-width: 780px) and  (max-height: 570px) { 
+  .checkout-content .bill-section{
+    margin-top: 0em;
+  }
+}
+@media only screen and (max-width: 780px) {
+  .checkout-sidebar button {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 780px) {
+  .checkout-sidebar {
+    width: 24em;
+  }
+  .payment-section .indicator {
+    bottom: 34px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .checkout-sidebar {
+    overflow-y: unset !important;
+    font-size: 1.15em;
+  }
+  .checkout-content .bill-section {
+    margin-top: 5em !important;
+  }
+}
+@media only screen and (max-width: 500px) and (max-height: 600px) {
+  .checkout-content .bill-section {
+    margin-top: 2em !important;
+  }
+}

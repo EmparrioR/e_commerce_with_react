@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Work+Sans:wght@300;400;500;600;700&display=swap'); 
+
+.product {
+  width: 13.7em;
+  min-height: 15em;
+  font-family: 'Work Sans';
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+}
+.product .image-container {
+  display: flex;
+  flex-grow: 1;
+  max-height: 12em;
+}
+.product img {
+  width: 100%;
+  /* height: 100%; */
+  object-fit: cover;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.product .description {
+  margin-top: 1.5em;
+}
+.add {
+  display: flex;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+.add button {
+  font-family: inherit;
+  background: none;
+  border: 2px solid black;
+  border-radius: 50em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  transition-duration: .3s;
+  min-width: 5em;
+  white-space: nowrap;
+}
+.add button:hover {
+  background-color: #3582ff;
+  color: white;
+  border-color: transparent;
+}
+@media only screen and (max-width: 800px) {
+  .add button {
+    font-size: .8em;
+  }
+} 
+@media only screen and (max-width: 500px) {
+  .product .name {
+    font-size: 1.1em;
+  }
+} 

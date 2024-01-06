@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Work+Sans:wght@300;400;600;700&display=swap'); 
+
+nav {
+  background-color: #333;
+  padding: 12px 1em;
+  display: flex;
+  justify-content: space-between;
+}
+nav .sidebar-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+nav .sidebar-btn svg {
+  stroke: white;
+  transition-duration: .3s;
+  font-size: 2em;
+}
+nav .sidebar-btn svg:hover {
+  stroke: #3582ff;
+}
+nav .notification {
+  width: 9px;
+  height: 9px;
+  border-radius: 8em;
+  position: absolute;
+  right: -5px;
+  top: 0;
+  background: #f94a3d;
+}
+nav .links{
+  display: flex;
+  color: white;
+  width: fit-content;
+  font-family: 'DM Sans';
+}
+nav .links > a li{
+  align-items: center;
+  display: flex;
+  margin-inline: 5px;
+  cursor: pointer;
+  padding: 3px;
+}
+nav .links > a li:hover {
+  color: #3582ff;
+}

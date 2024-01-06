@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Work+Sans:wght@300;400;500;600;700&display=swap'); 
+
+.product-container {
+  display: flex;
+  gap: 2.5em ;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 3rem 4rem;
+} 
+.credits {
+  font-family: 'DM Sans';
+  text-transform: capitalize;
+  margin-block: 2em 2em;
+  margin-inline: auto;
+  text-align: center;
+  position: relative;
+}
+.credits span:first-child {
+  margin-right: 25px;
+}
+.credits .heart {
+  fill: #fb6161;
+  position: absolute;
+  left: 5.3em;
+  bottom: .5px;
+}
+.credits .name {
+  color: #618ffb;
+  margin-left: 3px;
+}
+.credits .name:hover {
+  text-decoration: underline;
+}
+.credits span:nth-child(3) {
+  margin-right: 34px;
+}
+.react {
+  position: absolute;
+  right: 4.3em;
+  bottom: -4px;
+}
+.react svg {
+  animation: rotation 2s infinite linear;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+@media only screen and (max-width: 1220px) {
+  .product-container {
+    padding: 3em 1.5em;
+  }
+} 
+@media only screen and (max-width: 780px) {
+  .credits span:first-child {
+    margin-right: 19px;
+  }
+  .heart {
+    left: 5.17em;
+  }
+  .credits span:nth-child(3) {
+    margin-right: 26px;
+  }
+} 
+@media only screen and (max-width: 500px) {
+  .credits span:first-child {
+    margin-right: 16px;
+  }
+  .react {
+    bottom: -3px;
+  }
+  .credits span:nth-child(3) {
+    margin-right: 20px;
+  }
+} 
